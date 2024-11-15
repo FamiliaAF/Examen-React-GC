@@ -1,3 +1,5 @@
+import UserAge from "./UserAge";
+
 const UserProfile = ({ name, age, active }) => {
   return (
     <div 
@@ -5,7 +7,7 @@ const UserProfile = ({ name, age, active }) => {
         padding: '0.5em',
         margin: '0.5em',
         borderRadius: '0.5em',
-        backgroundColor: active ? '#b9daf6' : '#f8d7da',
+        backgroundColor: active ? '#aacd8f' : '#d9d9d9',
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
@@ -16,7 +18,7 @@ const UserProfile = ({ name, age, active }) => {
           style={{
             fontSize: '1em',
             margin: 0,
-            color: active ? '#186fc1' : '#721c24',
+            color: active ? '#466f32' : '#333',
           }}
         >
           {name}
@@ -30,16 +32,17 @@ const UserProfile = ({ name, age, active }) => {
         >
           {age} años
         </p>
+        <UserAge age={age} />
       </div>
-      <span 
+      <p 
         style={{
           fontSize: '0.7em',
-          color: active ? '#186fc1' : '#b02716',
+          color: active ? '#466f32' : '#333',
           fontWeight: 'bold',
         }}
       >
         {active ? "Activo" : "Inactivo"}
-      </span>
+      </p>
     </div>
   );
 };

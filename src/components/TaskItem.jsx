@@ -20,7 +20,7 @@ const TaskItem = ({ title, completed }) => {
       >
         {title}
       </h2>
-      <span 
+      <p 
         style={{
           fontSize: '0.7em',
           color: completed ? '#155724' : '#721c24',
@@ -28,7 +28,7 @@ const TaskItem = ({ title, completed }) => {
         }}
       >
         {completed ? "Completada" : "Pendiente"}
-      </span>
+      </p>
     </div>
   );
 };
